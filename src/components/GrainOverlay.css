@@ -1,0 +1,22 @@
+.grain-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  opacity: 0.05;
+  mix-blend-mode: overlay;
+}
+
+.grain-overlay::before {
+  content: '';
+  position: absolute;
+  inset: -50%;
+  width: 200%;
+  height: 200%;
+  filter: url(#grainFilter);
+  background: #808080;
+}
+
+@media (max-width: 640px) {
+  .grain-overlay { opacity: 0.035; }
+}

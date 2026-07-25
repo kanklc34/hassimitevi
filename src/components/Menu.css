@@ -1,0 +1,159 @@
+.menu {
+  padding: 88px 0;
+  position: relative;
+}
+
+.menu-title {
+  font-size: clamp(1.9rem, 4vw, 2.6rem);
+  margin-top: 10px;
+  max-width: 480px;
+}
+
+.menu-note {
+  margin-top: 14px;
+  color: var(--toprak);
+  font-size: 0.98rem;
+  max-width: 520px;
+}
+
+.menu-note-link {
+  color: var(--tugla);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* -- Kategori sekmeleri -- */
+.menu-tabs {
+  margin-top: 40px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.menu-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--tezgah);
+  border: 1.5px solid var(--cizgi);
+  color: var(--toprak);
+  padding: 10px 18px;
+  border-radius: 100px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.22s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.menu-tab svg { transition: transform 0.25s ease; color: var(--susam); }
+
+.menu-tab:hover {
+  border-color: var(--susam);
+  transform: translateY(-2px);
+}
+.menu-tab:hover svg { transform: rotate(-12deg) scale(1.1); }
+
+.menu-tab.is-active {
+  background: var(--tugla);
+  border-color: var(--tugla);
+  color: var(--tezgah);
+  box-shadow: 0 10px 20px rgba(181, 74, 42, 0.28);
+}
+.menu-tab.is-active svg { color: var(--tezgah); }
+
+/* -- Aktif kategori paneli -- */
+.menu-panel {
+  margin-top: 34px;
+  background: var(--tezgah);
+  border: 1px solid var(--cizgi);
+  border-radius: 22px;
+  padding: 46px 32px 20px;
+  position: relative;
+  overflow: hidden;
+  animation: panelIn 0.45s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+@keyframes panelIn {
+  from { opacity: 0; transform: translateY(10px) scale(0.99); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.menu-panel-badge {
+  position: absolute;
+  top: -16px;
+  right: 20px;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #fff, var(--un));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--susam);
+  box-shadow: 0 12px 24px rgba(61,40,23,0.16), inset 0 0 0 1px var(--cizgi);
+  animation: badgeSpin 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+@keyframes badgeSpin {
+  from { opacity: 0; transform: rotate(-30deg) scale(0.6); }
+  to   { opacity: 1; transform: rotate(0) scale(1); }
+}
+
+.menu-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 14px;
+  padding: 15px 0;
+  border-top: 1px dashed var(--cizgi);
+  animation: itemIn 0.45s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+.menu-item:first-child { border-top: none; }
+
+@keyframes itemIn {
+  from { opacity: 0; transform: translateX(-8px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.menu-item-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.menu-item-name {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.menu-item-desc {
+  font-size: 0.86rem;
+  color: var(--toprak);
+}
+
+.menu-item-price {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  color: var(--tugla);
+  white-space: nowrap;
+  flex-shrink: 0;
+  padding: 4px 12px;
+  border-radius: 100px;
+  background: rgba(181, 74, 42, 0.08);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+.menu-item:hover .menu-item-price {
+  background: var(--tugla);
+  color: var(--tezgah);
+  transform: scale(1.06);
+}
+
+@media (max-width: 600px) {
+  .menu-panel { padding: 30px 20px 16px; }
+  .menu-panel-badge { width: 60px; height: 60px; right: 16px; top: -14px; }
+}

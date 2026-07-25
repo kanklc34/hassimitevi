@@ -1,0 +1,39 @@
+.kinetic-title {
+  font-size: clamp(3.2rem, 8vw, 5.6rem);
+  font-weight: 700;
+  line-height: 0.94;
+  letter-spacing: -0.02em;
+  color: var(--kahve);
+}
+
+.kinetic-line {
+  display: block;
+  overflow: hidden;
+}
+
+.kinetic-line.is-italic {
+  font-style: italic;
+  color: var(--tugla);
+}
+
+.kinetic-char {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(70%) rotate(8deg);
+  animation: charIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes charIn {
+  to {
+    opacity: 1;
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kinetic-char {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}

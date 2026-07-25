@@ -1,0 +1,32 @@
+.site-footer {
+  border-top: 1px solid var(--cizgi);
+  padding: 26px 0 40px;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: var(--toprak);
+}
+
+.footer-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-mark {
+  height: 15px;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.85;
+}
+
+.footer-tag {
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--kahve);
+}
