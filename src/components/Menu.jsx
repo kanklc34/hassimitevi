@@ -43,7 +43,15 @@ export default function Menu() {
 
         <div className="menu-panel" key={activeId}>
           <div className="menu-panel-badge">
-            <ActiveIcon size={44} />
+            {active.photo ? (
+              <img
+                src={`${import.meta.env.BASE_URL}photos/${active.photo}`}
+                alt=""
+                className="menu-panel-photo"
+              />
+            ) : (
+              <ActiveIcon size={30} />
+            )}
           </div>
           <ul className="menu-items">
             {active.items.map((item, i) => (

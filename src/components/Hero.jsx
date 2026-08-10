@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from 'react';
-import { SimitIcon, PogacaIcon, KekIcon, CayIcon, AcmaIcon, BreadIcon, JarIcon } from './Icons';
 import KineticTitle from './KineticTitle';
 import './Hero.css';
 
@@ -21,10 +20,6 @@ export default function Hero({ onMenuClick }) {
   };
 
   const resetOffset = () => setOffset({ x: 0, y: 0 });
-
-  const layerStyle = (strength) => ({
-    transform: `translate(${offset.x * strength}px, ${offset.y * strength}px)`,
-  });
 
   return (
     <section className="hero">
@@ -59,47 +54,24 @@ export default function Hero({ onMenuClick }) {
           onMouseMove={handleMouseMove}
           onMouseLeave={resetOffset}
         >
-          {/* Duvar nişi - raf artık boşlukta değil, gömülü duruyor */}
-          <div className="shelf-niche" style={layerStyle(2)}>
-            <div className="niche-texture" />
-            <div className="niche-lights">
-              <span /><span /><span /><span /><span /><span />
-            </div>
+          <div
+            className="hero-photo-frame"
+            style={{
+              transform: `translate(${offset.x * -10}px, ${offset.y * -10}px) scale(1.06)`,
+            }}
+          >
+            <img
+              src={`${import.meta.env.BASE_URL}photos/hero-simit.jpg`}
+              alt="Fırından yeni çıkmış susamlı simitler"
+              className="hero-photo"
+              width="1402"
+              height="1122"
+            />
+            <div className="hero-photo-vignette" />
           </div>
 
-          <div className="hero-glow" style={layerStyle(6)} />
-
-          {/* Arka raf */}
-          <div className="shelf-level shelf-level-back" style={layerStyle(4)}>
-            <div className="shelf-plank shelf-plank-back" />
-            <div className="shelf-bracket shelf-bracket-left" />
-            <div className="shelf-bracket shelf-bracket-right" />
-            <div className="shelf-item shelf-item-back-1"><KekIcon size={42} /></div>
-            <div className="shelf-item shelf-item-back-2"><CayIcon size={36} /></div>
-            <div className="shelf-item shelf-item-back-3"><JarIcon size={40} /></div>
-          </div>
-
-          {/* Orta raf */}
-          <div className="shelf-level shelf-level-mid" style={layerStyle(10)}>
-            <div className="shelf-plank shelf-plank-mid" />
-            <div className="shelf-bracket shelf-bracket-left" />
-            <div className="shelf-bracket shelf-bracket-right" />
-            <div className="shelf-item shelf-item-mid-1"><AcmaIcon size={54} /></div>
-            <div className="shelf-item shelf-item-mid-2"><PogacaIcon size={56} /></div>
-            <div className="shelf-item shelf-item-mid-3"><BreadIcon size={50} /></div>
-          </div>
-
-          {/* Ön raf - imza öğe */}
-          <div className="shelf-level shelf-level-front" style={layerStyle(18)}>
-            <div className="shelf-plank shelf-plank-front" />
-            <div className="shelf-bracket shelf-bracket-left shelf-bracket-front" />
-            <div className="shelf-bracket shelf-bracket-right shelf-bracket-front" />
-            <div className="shelf-item shelf-item-front"><SimitIcon size={100} /></div>
-            <div className="shelf-ground-shadow" />
-          </div>
-
-          <div className="flour-puff-hero" aria-hidden="true">
-            <span /><span /><span /><span /><span />
+          <div className="niche-lights" aria-hidden="true">
+            <span /><span /><span /><span /><span /><span />
           </div>
         </div>
       </div>

@@ -5,6 +5,7 @@ export const menuCategories = [
     id: 'simitler',
     title: 'Simit ve Simitler',
     icon: 'simit',
+    photo: 'cat-simit.jpg',
     items: [
       { name: 'Klasik Simit', desc: 'Bol susamlı, fırından sıcak sıcak', price: 15 },
       { name: 'Kaşarlı Simit', desc: 'İçi eritilmiş kaşar peyniri ile', price: 30 },
@@ -15,6 +16,7 @@ export const menuCategories = [
     id: 'pogacalar',
     title: 'Poğaçalar',
     icon: 'pogaca',
+    photo: 'cat-pogaca.jpg',
     items: [
       { name: 'Peynirli Poğaça', desc: 'El açması, günlük taze', price: 18 },
       { name: 'Patatesli Poğaça', desc: 'Baharatlı iç harç, yumuşacık', price: 18 },
@@ -25,6 +27,7 @@ export const menuCategories = [
     id: 'acmalar',
     title: 'Açma ve Çeşitleri',
     icon: 'acma',
+    photo: 'cat-acma.jpg',
     items: [
       { name: 'Sade Açma', desc: 'Tereyağlı, katmerli', price: 16 },
       { name: 'Susamlı Açma', desc: 'Üzeri bol susam', price: 17 },
@@ -34,6 +37,7 @@ export const menuCategories = [
     id: 'catallar',
     title: 'Çatal',
     icon: 'catal',
+    photo: 'cat-catal.jpg',
     items: [
       { name: 'Klasik Çatal', desc: 'Katmer katmer, hafif tuzlu', price: 20 },
     ],
@@ -42,6 +46,7 @@ export const menuCategories = [
     id: 'tatlilar',
     title: 'Kek ve Kurabiyeler',
     icon: 'kek',
+    photo: 'cat-kek.jpg',
     items: [
       { name: 'Portakallı Kek', desc: 'Taze sıkma portakal kabuğuyla', price: 22 },
       { name: 'Tahinli Kurabiye', desc: 'Kütahya usulü, çıtır', price: 12 },
@@ -53,6 +58,7 @@ export const menuCategories = [
     id: 'icecekler',
     title: 'İçecekler',
     icon: 'cay',
+    photo: null,
     items: [
       { name: 'Çay', desc: 'Bardakta demli çay', price: 10 },
       { name: 'Türk Kahvesi', desc: 'Sade / az şekerli / şekerli', price: 25 },

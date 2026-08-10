@@ -6,7 +6,7 @@ export default function Header() {
     <header className="site-header">
       <div className="container site-header-inner">
         <a href="#" className="brand">
-          <img src="/logo-mark.png" alt="" className="brand-mark" width="46" height="20" />
+          <img src={`${import.meta.env.BASE_URL}logo-mark.png`} alt="" className="brand-mark" width="46" height="20" />
           <span>HAS SİMİT EVİ</span>
         </a>
         <nav className="site-nav">

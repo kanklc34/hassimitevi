@@ -5,6 +5,7 @@ import WhyUs from './components/WhyUs';
 import SectionDivider from './components/SectionDivider';
 import TableBadge from './components/TableBadge';
 import Menu from './components/Menu';
+import Gallery from './components/Gallery';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import FlourParticles from './components/FlourParticles';
@@ -33,6 +34,7 @@ export default function App() {
           <Marquee />
           <WhyUs />
           <SectionDivider color="#F7EFE1" flip />
+          <Gallery />
           <Menu />
           <Contact />
         </main>
