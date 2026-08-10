@@ -42,16 +42,20 @@ export default function Menu() {
         </div>
 
         <div className="menu-panel" key={activeId}>
-          <div className="menu-panel-badge">
+          <div className="menu-photo-banner">
             {active.photo ? (
               <img
                 src={`${import.meta.env.BASE_URL}photos/${active.photo}`}
-                alt=""
-                className="menu-panel-photo"
+                alt={active.title}
+                className="menu-photo-banner-img"
               />
             ) : (
-              <ActiveIcon size={30} />
+              <div className="menu-photo-banner-fallback">
+                <ActiveIcon size={54} />
+              </div>
             )}
+            <div className="menu-photo-banner-overlay" />
+            <span className="menu-photo-banner-label">{active.title}</span>
           </div>
           <ul className="menu-items">
             {active.items.map((item, i) => (
