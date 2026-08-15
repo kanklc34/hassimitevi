@@ -81,7 +81,7 @@
 .menu-photo-banner {
   position: relative;
   margin: 0 -32px 24px;
-  height: 210px;
+  height: 320px;
   overflow: hidden;
   animation: bannerIn 0.5s cubic-bezier(0.2, 0.7, 0.2, 1) both;
 }
@@ -133,7 +133,7 @@
   bottom: 16px;
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: var(--tezgah);
   text-shadow: 0 2px 8px rgba(0,0,0,0.25);
   z-index: 4;
@@ -216,8 +216,8 @@
 
 @media (max-width: 600px) {
   .menu-panel { padding: 0 20px 16px; }
-  .menu-photo-banner { margin: 0 -20px 20px; height: 165px; }
-  .menu-photo-banner-label { font-size: 1.25rem; left: 18px; }
+  .menu-photo-banner { margin: 0 -20px 20px; height: 230px; }
+  .menu-photo-banner-label { font-size: 1.4rem; left: 18px; }
   .menu-photo-dots { right: 16px; bottom: 14px; }
 }
 

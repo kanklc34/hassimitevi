@@ -62,7 +62,7 @@ export default function Hero({ onMenuClick }) {
           >
             <img
               src={`${import.meta.env.BASE_URL}photos/hero-simit.jpg`}
-              alt="Fırından yeni çıkmış taze simitler"
+              alt="Fırından yeni çıkmış susamlı simitler"
               className="hero-photo"
               width="1402"
               height="1122"
