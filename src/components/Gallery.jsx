@@ -2,12 +2,18 @@ import { useReveal } from '../hooks/useReveal';
 import './Gallery.css';
 
 const photos = [
-  { src: 'gallery-01.jpg', alt: 'Fırından yeni çıkmış taze simitler', big: true },
-  { src: 'gallery-02.jpg', alt: 'Zeytinli kaşarlı simit' },
-  { src: 'gallery-03.jpg', alt: 'Üzümlü kurabiyeler' },
-  { src: 'gallery-04.jpg', alt: 'Patatesli poğaça' },
-  { src: 'gallery-05.jpg', alt: 'Tahinli kurabiye' },
-  { src: 'gallery-06.jpg', alt: 'Çikolatalı ponçik' },
+  { src: 'simit-susamli.jpg', alt: 'Bol susamlı, klasik sokak simidi', big: true },
+  { src: 'simit-sucuklu-kasarli.jpg', alt: 'Sucuklu kaşarlı simit' },
+  { src: 'pogaca-peynirli.jpg', alt: 'Peynirli poğaça' },
+  { src: 'acma-zeytinli.jpg', alt: 'Zeytinli açma' },
+  { src: 'catal-klasik.jpg', alt: 'Klasik çatal' },
+  { src: 'kek-uzumlu-kurabiye.jpg', alt: 'Üzümlü kurabiyeler' },
+  { src: 'kek-islak.jpg', alt: 'Islak kek' },
+  { src: 'pogaca-zeytinli.jpg', alt: 'Zeytinli poğaça' },
+  { src: 'kek-ay-coregi.jpg', alt: 'Ay çöreği' },
+  { src: 'acma-kasarli.jpg', alt: 'Kaşarlı açma' },
+  { src: 'kek-cikolatali-poncik.jpg', alt: 'Çikolatalı ponçik' },
+  { src: 'pogaca-dereotlu.jpg', alt: 'Dereotlu poğaça' },
 ];
 
 export default function Gallery() {
