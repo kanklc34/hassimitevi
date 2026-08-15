@@ -5,8 +5,9 @@ export const menuCategories = [
     id: 'simitler',
     title: 'Simit Çeşitleri',
     icon: 'simit',
-    photos: ['simit-susamsiz.jpg', 'simit-sucuklu-kasarli.jpg', 'simit-zeytinli-kasarli.jpg'],
+    photos: ['simit-susamli.jpg', 'simit-susamsiz.jpg', 'simit-sucuklu-kasarli.jpg', 'simit-zeytinli-kasarli.jpg'],
     items: [
+      { name: 'Susamlı Simit', desc: 'Bol susamlı, klasik sokak simidi', price: 15 },
       { name: 'Susamsız Simit', desc: 'Sade, hafif ve çıtır', price: 14 },
       { name: 'Sucuklu Kaşarlı Simit', desc: 'Bol kaşar ve sucukla fırında', price: 32 },
       { name: 'Zeytinli Kaşarlı Simit', desc: 'Kaşar ve zeytinle harmanlanmış', price: 30 },
@@ -42,7 +43,7 @@ export const menuCategories = [
     id: 'catallar',
     title: 'Çatal',
     icon: 'catal',
-    photos: [],
+    photos: ['catal-klasik.jpg'],
     items: [
       { name: 'Klasik Çatal', desc: 'Katmer katmer, hafif tuzlu', price: 20 },
     ],
@@ -74,12 +75,15 @@ export const menuCategories = [
     id: 'icecekler',
     title: 'İçecekler',
     icon: 'cay',
-    photos: [],
+    photos: ['icecekler.jpg'],
     items: [
       { name: 'Çay', desc: 'Bardakta demli çay', price: 10 },
       { name: 'Türk Kahvesi', desc: 'Sade / az şekerli / şekerli', price: 25 },
-      { name: 'Ayran', desc: 'Soğuk servis', price: 12 },
+      { name: 'Ayran', desc: 'Sütaş, soğuk servis', price: 15 },
       { name: 'Su', desc: '0.5 L', price: 8 },
+      { name: 'Meyve Suyu', desc: 'Vişne / Karışık / Şeftali / Elma', price: 18 },
+      { name: 'Gazlı İçecek', desc: 'Coca-Cola / Fanta / Sprite', price: 20 },
+      { name: 'Ice Tea', desc: 'Lipton / Fuse Tea, limon aromalı', price: 20 },
     ],
   },
 ];
