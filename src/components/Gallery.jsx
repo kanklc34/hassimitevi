@@ -2,12 +2,12 @@ import { useReveal } from '../hooks/useReveal';
 import './Gallery.css';
 
 const photos = [
-  { src: 'gallery-01.jpg', alt: 'Fırından yeni çıkmış susamlı simitler', big: true },
-  { src: 'gallery-02.jpg', alt: 'Kaşarlı, zeytinli poğaça' },
+  { src: 'gallery-01.jpg', alt: 'Fırından yeni çıkmış taze simitler', big: true },
+  { src: 'gallery-02.jpg', alt: 'Zeytinli kaşarlı simit' },
   { src: 'gallery-03.jpg', alt: 'Üzümlü kurabiyeler' },
-  { src: 'gallery-04.jpg', alt: 'Çapraz kesim çatal' },
-  { src: 'gallery-05.jpg', alt: 'Susamlı sarma çörek' },
-  { src: 'gallery-06.jpg', alt: 'Kakaolu, pudra şekerli rulo' },
+  { src: 'gallery-04.jpg', alt: 'Patatesli poğaça' },
+  { src: 'gallery-05.jpg', alt: 'Tahinli kurabiye' },
+  { src: 'gallery-06.jpg', alt: 'Çikolatalı ponçik' },
 ];
 
 export default function Gallery() {

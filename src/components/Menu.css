@@ -77,11 +77,11 @@
   to   { opacity: 1; transform: translateY(0) scale(1); }
 }
 
-/* -- Kategori fotoğraf banner'ı - ürün görünür büyüklükte -- */
+/* -- Kategori fotoğraf banner'ı - ürün görünür büyüklükte, döner -- */
 .menu-photo-banner {
   position: relative;
   margin: 0 -32px 24px;
-  height: 190px;
+  height: 210px;
   overflow: hidden;
   animation: bannerIn 0.5s cubic-bezier(0.2, 0.7, 0.2, 1) both;
 }
@@ -92,10 +92,22 @@
 }
 
 .menu-photo-banner-img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
+  opacity: 0;
+  transition: opacity 1.1s ease, transform 7s linear;
+  transform: scale(1);
+  z-index: 1;
+}
+
+.menu-photo-banner-img.is-active {
+  opacity: 1;
+  transform: scale(1.06);
+  z-index: 2;
 }
 
 .menu-photo-banner-fallback {
@@ -112,6 +124,7 @@
   position: absolute;
   inset: 0;
   background: linear-gradient(180deg, rgba(61,40,23,0) 40%, rgba(61,40,23,0.72) 100%);
+  z-index: 3;
 }
 
 .menu-photo-banner-label {
@@ -123,6 +136,27 @@
   font-size: 1.5rem;
   color: var(--tezgah);
   text-shadow: 0 2px 8px rgba(0,0,0,0.25);
+  z-index: 4;
+}
+
+.menu-photo-dots {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  gap: 6px;
+  z-index: 4;
+}
+.menu-photo-dots span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.45);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+.menu-photo-dots span.is-active {
+  background: var(--susam);
+  transform: scale(1.3);
 }
 
 .menu-items {
@@ -182,6 +216,11 @@
 
 @media (max-width: 600px) {
   .menu-panel { padding: 0 20px 16px; }
-  .menu-photo-banner { margin: 0 -20px 20px; height: 150px; }
+  .menu-photo-banner { margin: 0 -20px 20px; height: 165px; }
   .menu-photo-banner-label { font-size: 1.25rem; left: 18px; }
+  .menu-photo-dots { right: 16px; bottom: 14px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .menu-photo-banner-img { transition: opacity 0.3s ease; transform: none !important; }
 }
