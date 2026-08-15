@@ -14,6 +14,7 @@ const photos = [
   { src: 'acma-kasarli.jpg', alt: 'Kaşarlı açma' },
   { src: 'kek-cikolatali-poncik.jpg', alt: 'Çikolatalı ponçik' },
   { src: 'pogaca-dereotlu.jpg', alt: 'Dereotlu poğaça' },
+  { src: 'kek-havuclu.jpg', alt: 'Havuçlu kek' },
 ];
 
 export default function Gallery() {
