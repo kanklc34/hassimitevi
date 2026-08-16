@@ -46,3 +46,11 @@
 @media (max-width: 640px) {
   .site-nav { display: none; }
 }
+
+@media (max-width: 400px) {
+  .site-header-inner { padding: 12px 14px; gap: 8px; }
+  .brand { font-size: 0.92rem; gap: 7px; }
+  .brand-mark { height: 19px; }
+  .header-call { padding: 8px 13px; font-size: 0.82rem; }
+  .header-call svg { width: 14px; height: 14px; }
+}
